@@ -42,7 +42,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 26
-        applicationId "com.google.android.apps.calculator"
+        applicationId "com.fayne.calculator"
     }
 
     sourceSets {
