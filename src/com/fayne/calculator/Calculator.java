@@ -242,6 +242,7 @@ public class Calculator extends Activity
                 mFormulaEditText.append(((Button) view).getText() + "(");
                 break;
             //BIRD add by zhanglixian 20161215 begin
+            //JYUN modify by fanjinhao 20180110
             case R.id.dec_point:
                 if(SystemProperties.getBoolean("ro.bdfun.add_zero",false)){
                     if(mFormulaEditText.getText().toString().equals("")){
@@ -249,10 +250,7 @@ public class Calculator extends Activity
                     }else{
                         mStrLength = mFormulaEditText.getText().toString().length();
                         mLastStr = mFormulaEditText.getText().toString().substring(mStrLength-1,mStrLength);
-                        if(!mLastStr.equals("0") && !mLastStr.equals("1") && !mLastStr.equals("2") &&
-                           !mLastStr.equals("3") && !mLastStr.equals("4") && !mLastStr.equals("5") &&
-                           !mLastStr.equals("6") && !mLastStr.equals("7") && !mLastStr.equals("8") &&
-                           !mLastStr.equals("9") && !mLastStr.equals(".")){
+                        if(!"0123456789.".contains(mLastStr)){
                            mFormulaEditText.append("0"+((Button) view).getText());
                         }else{
                             mFormulaEditText.append(((Button) view).getText());
