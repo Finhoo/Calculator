@@ -57,7 +57,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildToolsVersion '26.0.2'
 }
 
 repositories {
@@ -68,5 +67,5 @@ repositories {
 dependencies {
     compile files("arity-2.1.2.jar")
     compile "com.android.support:support-v4:+"
-    provided files("${SDK_DIR}/platforms/android-20/data/layoutlib.jar")
+    provided files("${SDK_DIR}/platforms/android-21/data/layoutlib.jar")
 }

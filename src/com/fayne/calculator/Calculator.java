@@ -170,6 +170,7 @@ public class Calculator extends Activity
                 mTokenizer.getNormalizedExpression(mFormulaEditText.getText().toString()));
     }
 
+
     private void setState(CalculatorState state) {
         if (mCurrentState != state) {
             mCurrentState = state;
@@ -186,14 +187,14 @@ public class Calculator extends Activity
                 final int errorColor = getResources().getColor(R.color.calculator_error_color);
                 mFormulaEditText.setTextColor(errorColor);
                 mResultEditText.setTextColor(errorColor);
-                //getWindow().setStatusBarColor(errorColor);
+                getWindow().setStatusBarColor(errorColor);
             } else {
                 mFormulaEditText.setTextColor(
                         getResources().getColor(R.color.display_formula_text_color));
                 mResultEditText.setTextColor(
                         getResources().getColor(R.color.display_result_text_color));
-//                getWindow().setStatusBarColor(
-//                        getResources().getColor(R.color.calculator_accent_color));
+                getWindow().setStatusBarColor(
+                        getResources().getColor(R.color.calculator_accent_color));
             }
         }
     }
